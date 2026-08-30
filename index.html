@@ -18,7 +18,9 @@ html,body{
   height:100%;
   overflow:hidden;
   background:#111;
-  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,
+  "Noto Sans JP","Hiragino Kaku Gothic ProN",
+  Meiryo,sans-serif;
 }
 
 body{
@@ -33,37 +35,46 @@ body{
   height:min(100vh,177.7778vw);
   aspect-ratio:9/16;
   overflow:hidden;
-  background:linear-gradient(180deg,#fff8fb,#f5f1ff 55%,#eef8ff);
+  background:linear-gradient(
+    180deg,
+    #fff8fb,
+    #f5f1ff 55%,
+    #eef8ff
+  );
 }
 
-/* ===== タイトル ===== */
+/* =========================
+タイトル
+========================= */
 
 .header{
-  height:8.5%;
+  height:8%;
   text-align:center;
-  padding:1.2% 2% 0;
+  padding:1.1% 2% 0;
 }
 
 .title{
   margin:0;
-  font-size:clamp(15px,4.5vw,22px);
-  line-height:1.08;
+  font-size:clamp(15px,4.4vw,22px);
+  line-height:1.05;
   font-weight:1000;
 }
 
 .subtitle{
   margin-top:.4%;
-  font-size:clamp(7px,2vw,10px);
-  font-weight:800;
+  font-size:clamp(7px,1.9vw,10px);
   color:#666;
+  font-weight:800;
 }
 
-/* ===== ランキング ===== */
+/* =========================
+ランキング
+========================= */
 
 .rank{
-  height:8%;
+  height:7.7%;
   margin:0 2.3%;
-  padding:1.2%;
+  padding:1.1%;
   background:#fff;
   border-radius:11px;
   box-shadow:0 3px 10px rgba(0,0,0,.08);
@@ -72,7 +83,7 @@ body{
 .rank-title{
   height:22%;
   text-align:center;
-  font-size:clamp(7px,2vw,10px);
+  font-size:clamp(7px,1.9vw,10px);
   font-weight:1000;
 }
 
@@ -93,12 +104,20 @@ body{
   background:#eee;
 }
 
-.rank-item:nth-child(1){background:#fff0a5}
-.rank-item:nth-child(2){background:#eee}
-.rank-item:nth-child(3){background:#efdcc7}
+.rank-item:nth-child(1){
+  background:#fff0a5;
+}
+
+.rank-item:nth-child(2){
+  background:#eee;
+}
+
+.rank-item:nth-child(3){
+  background:#efdcc7;
+}
 
 .rank-medal{
-  font-size:clamp(11px,3vw,16px);
+  font-size:clamp(10px,2.8vw,15px);
   line-height:1;
 }
 
@@ -107,20 +126,22 @@ body{
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
-  font-size:clamp(7px,2vw,10px);
+  font-size:clamp(6px,1.8vw,9px);
   font-weight:1000;
 }
 
 .rank-pos{
-  font-size:clamp(6px,1.7vw,8px);
+  font-size:clamp(5px,1.5vw,8px);
   color:#666;
   font-weight:900;
 }
 
-/* ===== 出身県選択ボタン ===== */
+/* =========================
+県選択
+========================= */
 
 .select-area{
-  height:7%;
+  height:6.5%;
   margin:1% 2.3% 0;
 }
 
@@ -131,60 +152,63 @@ body{
   border-radius:11px;
   background:#222;
   color:#fff;
-  font-size:clamp(11px,3.3vw,16px);
+  font-size:clamp(11px,3.2vw,16px);
   font-weight:1000;
-  box-shadow:0 3px 8px rgba(0,0,0,.15);
 }
 
 .select-button:active{
   transform:scale(.98);
 }
 
-/* ===== 選択中 ===== */
+/* =========================
+選択中
+========================= */
 
 .selected{
-  height:5.5%;
+  height:5%;
   margin:1% 2.3% 0;
-  border-radius:10px;
   background:#fff;
+  border-radius:10px;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   gap:5px;
   box-shadow:0 2px 7px rgba(0,0,0,.06);
 }
 
 .selected-small{
-  font-size:clamp(7px,1.8vw,9px);
   color:#777;
+  font-size:clamp(7px,1.7vw,9px);
   font-weight:800;
 }
 
 .selected-name{
-  font-size:clamp(11px,3.2vw,16px);
+  font-size:clamp(10px,3vw,15px);
   font-weight:1000;
 }
 
-/* ===== すごろく盤 ===== */
+/* =========================
+すごろく
+========================= */
 
 .board-area{
-  height:29%;
+  height:30%;
   margin:1% 2.3% 0;
-  padding:1.4%;
+  padding:1.3%;
   background:#fff;
   border-radius:11px;
   box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
 .board-title{
-  height:10%;
+  height:9%;
   text-align:center;
-  font-size:clamp(7px,2vw,10px);
+  font-size:clamp(7px,1.9vw,10px);
   font-weight:1000;
 }
 
 .board{
-  height:88%;
+  height:90%;
   display:grid;
   grid-template-columns:repeat(6,1fr);
   grid-template-rows:repeat(5,1fr);
@@ -198,12 +222,20 @@ body{
   border:1px solid #d5d5d5;
   border-radius:5px;
   background:#fafafa;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:clamp(6px,1.7vw,9px);
-  font-weight:1000;
   overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cell-number{
+  position:absolute;
+  left:3px;
+  top:2px;
+  font-size:clamp(6px,1.6vw,9px);
+  font-weight:1000;
+  color:#777;
+  z-index:3;
 }
 
 .cell.goal{
@@ -211,42 +243,95 @@ body{
   border-color:#d2a500;
 }
 
-.piece{
+.goal-label{
   position:absolute;
-  right:1px;
-  bottom:1px;
-  max-width:95%;
-  padding:1px 2px;
-  border-radius:4px;
-  background:#222;
-  color:#fff;
+  left:50%;
+  top:3px;
+  transform:translateX(-50%);
   font-size:clamp(5px,1.5vw,8px);
-  font-weight:900;
+  font-weight:1000;
+  color:#8a6800;
+  z-index:3;
+}
+
+/* =========================
+複数コマ表示
+大きめ設定
+========================= */
+
+.pieces{
+  width:100%;
+  height:78%;
+  margin-top:15%;
+  padding:3px 2px;
+
+  display:flex;
+  flex-wrap:wrap;
+  align-content:center;
+  justify-content:center;
+
+  gap:3px 2px;
+
+  overflow:hidden;
+}
+
+.piece{
+  min-width:0;
+  max-width:48%;
+
+  padding:3px 5px;
+
+  border-radius:20px;
+
+  color:#fff;
+
+  font-size:clamp(6px,1.8vw,9px);
+  line-height:1.25;
+
+  font-weight:1000;
+
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
+
+  box-shadow:
+    0 2px 3px rgba(0,0,0,.25);
+
+  border:1px solid rgba(255,255,255,.85);
+
+  flex-shrink:0;
+
+  text-align:center;
 }
 
-/* ===== 47県状況 ===== */
+.piece.selected-piece{
+  outline:2px solid #111;
+  transform:scale(1.1);
+  z-index:5;
+}
+
+/* =========================
+47県一覧
+========================= */
 
 .status{
   height:20%;
   margin:1% 2.3% 0;
-  padding:1.2%;
+  padding:1.1%;
   background:#fff;
   border-radius:11px;
   box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
 .status-title{
-  height:10%;
+  height:9%;
   text-align:center;
-  font-size:clamp(7px,2vw,10px);
+  font-size:clamp(7px,1.9vw,10px);
   font-weight:1000;
 }
 
 .status-grid{
-  height:88%;
+  height:90%;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   grid-template-rows:repeat(12,1fr);
@@ -256,15 +341,22 @@ body{
 .status-item{
   min-width:0;
   min-height:0;
+
   border:1px solid #ddd;
   border-radius:4px;
-  background:#fafafa;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   padding:0 3px;
-  font-size:clamp(5px,1.45vw,7px);
+
+  background:#fafafa;
+
+  font-size:clamp(4.8px,1.4vw,7px);
   font-weight:900;
+
+  cursor:pointer;
 }
 
 .status-item.active{
@@ -289,26 +381,28 @@ body{
   color:#fff;
 }
 
-/* ===== ギフト ===== */
+/* =========================
+ギフト
+========================= */
 
 .gift-area{
   height:11%;
   margin:1% 2.3% 0;
-  padding:1.2%;
+  padding:1.1%;
   background:#fff;
   border-radius:11px;
   box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
 .gift-title{
-  height:23%;
+  height:22%;
   text-align:center;
-  font-size:clamp(7px,2vw,10px);
+  font-size:clamp(7px,1.9vw,10px);
   font-weight:1000;
 }
 
 .gifts{
-  height:72%;
+  height:74%;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:4px;
@@ -318,7 +412,7 @@ body{
   border:0;
   border-radius:8px;
   background:#f1f1f1;
-  font-size:clamp(7px,2.2vw,11px);
+  font-size:clamp(7px,2vw,10px);
   font-weight:1000;
 }
 
@@ -326,7 +420,9 @@ body{
   transform:scale(.94);
 }
 
-/* ===== 下ボタン ===== */
+/* =========================
+下ボタン
+========================= */
 
 .controls{
   height:6%;
@@ -340,7 +436,7 @@ body{
   border:0;
   border-radius:8px;
   color:#fff;
-  font-size:clamp(7px,2vw,10px);
+  font-size:clamp(7px,1.9vw,10px);
   font-weight:1000;
 }
 
@@ -352,20 +448,24 @@ body{
   background:#222;
 }
 
-/* =====================================================
-47都道府県 選択画面
-===================================================== */
+/* =================================================
+47都道府県選択画面
+================================================= */
 
 .pref-modal{
   position:absolute;
   inset:0;
   z-index:100;
-  background:rgba(20,20,25,.65);
+
+  background:rgba(20,20,25,.68);
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   opacity:0;
   pointer-events:none;
+
   transition:.2s;
 }
 
@@ -377,15 +477,20 @@ body{
 .pref-box{
   width:94%;
   height:91%;
+
   background:#fff;
+
   border-radius:18px;
+
   padding:3%;
+
   display:flex;
   flex-direction:column;
 }
 
 .pref-head{
   height:9%;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -399,44 +504,57 @@ body{
 .close-pref{
   width:38px;
   height:38px;
+
   border:0;
   border-radius:50%;
+
   background:#eee;
+
   font-size:18px;
   font-weight:1000;
 }
 
 .pref-help{
   height:5%;
+
   text-align:center;
+
   color:#777;
-  font-size:clamp(7px,2vw,10px);
+
+  font-size:clamp(7px,1.9vw,10px);
   font-weight:800;
 }
 
 .pref-select-grid{
   flex:1;
   min-height:0;
+
   overflow:auto;
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:5px;
+
   padding:3px 1px;
 }
 
 .pref-btn{
-  min-height:42px;
+  min-height:43px;
+
   border:1px solid #ddd;
   border-radius:9px;
+
   background:#f8f8f8;
+
   font-size:clamp(9px,2.7vw,13px);
+
   font-weight:1000;
 }
 
 .pref-btn:active{
   transform:scale(.96);
-  background:#222;
-  color:#fff;
 }
 
 .pref-btn.current{
@@ -445,72 +563,21 @@ body{
   border-color:#222;
 }
 
-/* ===== ポップアップ ===== */
-
-.popup{
-  position:absolute;
-  inset:0;
-  z-index:200;
-  background:rgba(0,0,0,.45);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  opacity:0;
-  pointer-events:none;
-}
-
-.popup.show{
-  opacity:1;
-  pointer-events:auto;
-}
-
-.popup-box{
-  width:76%;
-  max-width:300px;
-  background:#fff;
-  border-radius:20px;
-  padding:22px 14px;
-  text-align:center;
-}
-
-.popup-icon{
-  font-size:44px;
-}
-
-.popup-title{
-  margin-top:3px;
-  font-size:19px;
-  font-weight:1000;
-}
-
-.popup-text{
-  margin-top:5px;
-  font-size:12px;
-  color:#555;
-  font-weight:800;
-}
-
-.popup-close{
-  width:100%;
-  height:40px;
-  margin-top:12px;
-  border:0;
-  border-radius:9px;
-  background:#222;
-  color:#fff;
-  font-weight:1000;
-}
-
-/* ===== 設定 ===== */
+/* =========================
+設定
+========================= */
 
 .settings-modal{
   position:absolute;
   inset:0;
   z-index:150;
+
   background:rgba(0,0,0,.55);
+
   display:flex;
   justify-content:center;
   align-items:center;
+
   opacity:0;
   pointer-events:none;
 }
@@ -523,9 +590,13 @@ body{
 .settings-box{
   width:90%;
   max-height:90%;
+
   overflow:auto;
+
   background:#fff;
+
   border-radius:18px;
+
   padding:16px;
 }
 
@@ -546,9 +617,12 @@ body{
 .setting-input{
   height:36px;
   width:100%;
+
   border:1px solid #ddd;
   border-radius:7px;
+
   padding:0 5px;
+
   font-size:11px;
   font-weight:800;
 }
@@ -557,13 +631,16 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:5px;
+
   margin-top:9px;
 }
 
 .setting-button{
   height:42px;
+
   border:0;
   border-radius:9px;
+
   font-weight:1000;
 }
 
@@ -575,6 +652,81 @@ body{
 .cancel{
   background:#eee;
 }
+
+/* =========================
+POPUP
+========================= */
+
+.popup{
+  position:absolute;
+  inset:0;
+
+  z-index:200;
+
+  background:rgba(0,0,0,.45);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+  pointer-events:none;
+}
+
+.popup.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.popup-box{
+  width:76%;
+  max-width:300px;
+
+  background:#fff;
+
+  border-radius:20px;
+
+  padding:22px 14px;
+
+  text-align:center;
+}
+
+.popup-icon{
+  font-size:44px;
+}
+
+.popup-title{
+  margin-top:3px;
+
+  font-size:19px;
+  font-weight:1000;
+}
+
+.popup-text{
+  margin-top:5px;
+
+  font-size:12px;
+
+  color:#555;
+
+  font-weight:800;
+}
+
+.popup-close{
+  width:100%;
+  height:40px;
+
+  margin-top:12px;
+
+  border:0;
+  border-radius:9px;
+
+  background:#222;
+
+  color:#fff;
+
+  font-weight:1000;
+}
 </style>
 </head>
 
@@ -583,231 +735,263 @@ body{
 <div class="app">
 
 <!-- タイトル -->
-<div class="header">
-  <h1 class="title">
-    🗾 出身県はどこ？<br>
-    県民パワーでGOALを目指せ！
-  </h1>
 
-  <div class="subtitle">
-    指定ギフトで出身県のコマを進めよう！
-  </div>
+<div class="header">
+
+<h1 class="title">
+🗾 出身県はどこ？<br>
+県民パワーでGOALを目指せ！
+</h1>
+
+<div class="subtitle">
+指定ギフトで出身県のコマを進めよう！
+</div>
+
 </div>
 
 
 <!-- ランキング -->
+
 <div class="rank">
 
-  <div class="rank-title">
-    🏆 現在のTOP3
-  </div>
+<div class="rank-title">
+🏆 現在のTOP3
+</div>
 
-  <div
-    class="rank-list"
-    id="rankList">
-  </div>
+<div
+class="rank-list"
+id="rankList">
+</div>
 
 </div>
 
 
-<!-- 出身県を選ぶ -->
+<!-- 県選択 -->
+
 <div class="select-area">
 
-  <button
-    class="select-button"
-    onclick="openPrefSelector()">
+<button
+class="select-button"
+onclick="openPrefSelector()">
 
-    🗾 出身県を選ぶ
+🗾 出身県を選ぶ
 
-  </button>
+</button>
 
 </div>
 
 
 <!-- 選択中 -->
+
 <div class="selected">
 
-  <span class="selected-small">
-    応援中
-  </span>
+<span class="selected-small">
+現在選択中
+</span>
 
-  <span
-    class="selected-name"
-    id="selectedName">
-    まだ選択されていません
-  </span>
+<span
+class="selected-name"
+id="selectedName">
+
+まだ選択されていません
+
+</span>
 
 </div>
 
 
 <!-- すごろく -->
+
 <div class="board-area">
 
-  <div class="board-title">
-    🏁 30マス先がGOAL！
-  </div>
+<div class="board-title">
+🏁 30マス先がGOAL！
+</div>
 
-  <div
-    class="board"
-    id="board">
-  </div>
+<div
+class="board"
+id="board">
+</div>
 
 </div>
 
 
-<!-- 47都道府県 -->
+<!-- 47県一覧 -->
+
 <div class="status">
 
-  <div class="status-title">
-    📊 47都道府県 現在位置
-  </div>
+<div class="status-title">
+📊 47都道府県 現在位置
+</div>
 
-  <div
-    class="status-grid"
-    id="statusGrid">
-  </div>
+<div
+class="status-grid"
+id="statusGrid">
+</div>
 
 </div>
 
 
 <!-- ギフト -->
+
 <div class="gift-area">
 
-  <div class="gift-title">
-    🎁 指定ギフトが来たらコマを進める！
-  </div>
+<div class="gift-title">
+🎁 指定ギフトが来たらコマを進める！
+</div>
 
-  <div
-    class="gifts"
-    id="giftButtons">
-  </div>
+<div
+class="gifts"
+id="giftButtons">
+</div>
 
 </div>
 
 
 <!-- 操作 -->
+
 <div class="controls">
 
-  <button
-    class="control settings"
-    onclick="openSettings()">
-    ⚙️ ギフト設定
-  </button>
+<button
+class="control settings"
+onclick="openSettings()">
 
-  <button
-    class="control reset"
-    onclick="resetGame()">
-    🔄 リセット
-  </button>
+⚙️ ギフト設定
+
+</button>
+
+<button
+class="control reset"
+onclick="resetGame()">
+
+🔄 リセット
+
+</button>
 
 </div>
 
 
 <!-- =================================================
-都道府県選択画面
+都道府県選択
 ================================================= -->
 
 <div
-  class="pref-modal"
-  id="prefModal">
+class="pref-modal"
+id="prefModal">
 
-  <div class="pref-box">
+<div class="pref-box">
 
-    <div class="pref-head">
+<div class="pref-head">
 
-      <div class="pref-head-title">
-        🗾 出身県を選んでね
-      </div>
+<div class="pref-head-title">
+🗾 出身県を選んでね
+</div>
 
-      <button
-        class="close-pref"
-        onclick="closePrefSelector()">
-        ×
-      </button>
+<button
+class="close-pref"
+onclick="closePrefSelector()">
 
-    </div>
+×
 
-    <div class="pref-help">
-      自分の出身県をタップすると選択できます
-    </div>
+</button>
 
-    <div
-      class="pref-select-grid"
-      id="prefSelectGrid">
-    </div>
+</div>
 
-  </div>
+<div class="pref-help">
+自分の出身県をタップしてください
+</div>
+
+<div
+class="pref-select-grid"
+id="prefSelectGrid">
+</div>
+
+</div>
 
 </div>
 
 
-<!-- ポップアップ -->
+<!-- =================================================
+設定
+================================================= -->
 
 <div
-  class="popup"
-  id="popup">
+class="settings-modal"
+id="settingsModal">
 
-  <div class="popup-box">
+<div class="settings-box">
 
-    <div
-      class="popup-icon"
-      id="popupIcon">
-      🎁
-    </div>
+<div class="settings-title">
+⚙️ 指定ギフト設定
+</div>
 
-    <div
-      class="popup-title"
-      id="popupTitle">
-      県民パワーUP！
-    </div>
+<div id="settingsRows"></div>
 
-    <div
-      class="popup-text"
-      id="popupText">
-    </div>
+<div class="setting-buttons">
 
-    <button
-      class="popup-close"
-      onclick="closePopup()">
-      閉じる
-    </button>
+<button
+class="setting-button save"
+onclick="saveSettings()">
 
-  </div>
+保存
+
+</button>
+
+<button
+class="setting-button cancel"
+onclick="closeSettings()">
+
+キャンセル
+
+</button>
+
+</div>
+
+</div>
 
 </div>
 
 
-<!-- 設定 -->
+<!-- =================================================
+POPUP
+================================================= -->
 
 <div
-  class="settings-modal"
-  id="settingsModal">
+class="popup"
+id="popup">
 
-  <div class="settings-box">
+<div class="popup-box">
 
-    <div class="settings-title">
-      ⚙️ 指定ギフト設定
-    </div>
+<div
+class="popup-icon"
+id="popupIcon">
 
-    <div id="settingsRows"></div>
+🎁
 
-    <div class="setting-buttons">
+</div>
 
-      <button
-        class="setting-button save"
-        onclick="saveSettings()">
-        保存
-      </button>
+<div
+class="popup-title"
+id="popupTitle">
 
-      <button
-        class="setting-button cancel"
-        onclick="closeSettings()">
-        キャンセル
-      </button>
+県民パワーUP！
 
-    </div>
+</div>
 
-  </div>
+<div
+class="popup-text"
+id="popupText">
+</div>
+
+<button
+class="popup-close"
+onclick="closePopup()">
+
+閉じる
+
+</button>
+
+</div>
 
 </div>
 
@@ -881,7 +1065,75 @@ const prefectures=[
 
 
 /* =====================================================
-ゲーム設定
+47県 固定カラー
+===================================================== */
+
+const colors=[
+
+"#e53935",
+"#8e24aa",
+"#3949ab",
+"#1e88e5",
+"#00897b",
+"#43a047",
+"#7cb342",
+"#c0ca33",
+"#f9a825",
+"#ff8f00",
+"#fb8c00",
+"#f4511e",
+"#d81b60",
+"#ad1457",
+"#6d4c41",
+"#546e7a",
+"#5e35b1",
+"#00acc1",
+"#00838f",
+"#2e7d32",
+"#558b2f",
+"#827717",
+"#ef6c00",
+"#bf360c",
+"#c62828",
+"#6a1b9a",
+"#283593",
+"#1565c0",
+"#00695c",
+"#2e7d32",
+"#689f38",
+"#9e9d24",
+"#ef6c00",
+"#ff6f00",
+"#e65100",
+"#b71c1c",
+"#880e4f",
+"#4527a0",
+"#311b92",
+"#0277bd",
+"#00838f",
+"#00695c",
+"#33691e",
+"#827717",
+"#ff8f00",
+"#e65100",
+"#4e342e"
+
+];
+
+
+const prefectureColor={};
+
+prefectures.forEach(
+(pref,index)=>{
+
+  prefectureColor[pref]=
+    colors[index];
+
+});
+
+
+/* =====================================================
+ゲーム
 ===================================================== */
 
 const GOAL=30;
@@ -889,53 +1141,55 @@ const GOAL=30;
 const positions={};
 
 prefectures.forEach(pref=>{
+
   positions[pref]=0;
+
 });
 
 let selectedPref=null;
 
 
 /* =====================================================
-ギフト設定
+ギフト
 ===================================================== */
 
 let gifts=[
 
-  {
-    icon:"❤️",
-    name:"ハートミー",
-    move:1
-  },
+{
+icon:"❤️",
+name:"ハートミー",
+move:1
+},
 
-  {
-    icon:"🍩",
-    name:"ドーナツ",
-    move:3
-  },
+{
+icon:"🍩",
+name:"ドーナツ",
+move:3
+},
 
-  {
-    icon:"🎁",
-    name:"指定ギフト",
-    move:5
-  },
+{
+icon:"🎁",
+name:"指定ギフト",
+move:5
+},
 
-  {
-    icon:"⭐",
-    name:"スペシャル",
-    move:10
-  },
+{
+icon:"⭐",
+name:"スペシャル",
+move:10
+},
 
-  {
-    icon:"🌟",
-    name:"特大ギフト",
-    move:20
-  }
+{
+icon:"🌟",
+name:"特大ギフト",
+move:20
+}
 
 ];
 
 
 /* =====================================================
-すごろく盤
+盤面作成
 ===================================================== */
 
 function createBoard(){
@@ -945,6 +1199,7 @@ function createBoard(){
 
   board.innerHTML="";
 
+
   for(let i=1;i<=GOAL;i++){
 
     const cell=
@@ -952,14 +1207,45 @@ function createBoard(){
 
     cell.className="cell";
 
+    cell.id="cell-"+i;
+
+
+    const number=
+      document.createElement("div");
+
+    number.className="cell-number";
+
+    number.textContent=i;
+
+
+    const pieces=
+      document.createElement("div");
+
+    pieces.className="pieces";
+
+    pieces.id="pieces-"+i;
+
+
+    cell.appendChild(number);
+
+    cell.appendChild(pieces);
+
+
     if(i===GOAL){
+
       cell.classList.add("goal");
-      cell.textContent="🏁 GOAL";
-    }else{
-      cell.textContent=i;
+
+      const label=
+        document.createElement("div");
+
+      label.className="goal-label";
+
+      label.textContent="🏁 GOAL";
+
+      cell.appendChild(label);
+
     }
 
-    cell.id="cell-"+i;
 
     board.appendChild(cell);
 
@@ -969,15 +1255,18 @@ function createBoard(){
 
 
 /* =====================================================
-47県状況
+47県一覧
 ===================================================== */
 
 function createStatus(){
 
   const grid=
-    document.getElementById("statusGrid");
+    document.getElementById(
+      "statusGrid"
+    );
 
   grid.innerHTML="";
+
 
   prefectures.forEach(pref=>{
 
@@ -989,24 +1278,30 @@ function createStatus(){
     item.id=
       "statusItem-"+pref;
 
+
     item.onclick=()=>{
+
       selectPref(pref);
+
     };
+
 
     item.innerHTML=`
 
-      <span
-        class="status-name">
+      <span class="status-name">
         ${pref}
       </span>
 
       <span
         class="status-pos"
         id="status-${pref}">
+
         0/30
+
       </span>
 
     `;
+
 
     grid.appendChild(item);
 
@@ -1016,7 +1311,7 @@ function createStatus(){
 
 
 /* =====================================================
-47都道府県選択画面
+県選択画面
 ===================================================== */
 
 function createPrefSelector(){
@@ -1027,6 +1322,7 @@ function createPrefSelector(){
     );
 
   grid.innerHTML="";
+
 
   prefectures.forEach(pref=>{
 
@@ -1040,10 +1336,15 @@ function createPrefSelector(){
     button.id=
       "prefButton-"+pref;
 
+
     button.onclick=()=>{
+
       selectPref(pref);
+
       closePrefSelector();
+
     };
+
 
     grid.appendChild(button);
 
@@ -1053,7 +1354,7 @@ function createPrefSelector(){
 
 
 /* =====================================================
-選択画面を開く
+県選択画面
 ===================================================== */
 
 function openPrefSelector(){
@@ -1066,10 +1367,6 @@ function openPrefSelector(){
 
 }
 
-
-/* =====================================================
-選択画面を閉じる
-===================================================== */
 
 function closePrefSelector(){
 
@@ -1088,19 +1385,23 @@ function selectPref(pref){
 
   selectedPref=pref;
 
+
   document.getElementById(
     "selectedName"
   ).textContent=pref;
+
 
   updatePrefButtons();
 
   updateStatusActive();
 
+  renderPieces();
+
 }
 
 
 /* =====================================================
-選択ボタンの状態
+県選択ボタン状態
 ===================================================== */
 
 function updatePrefButtons(){
@@ -1111,6 +1412,7 @@ function updatePrefButtons(){
       document.getElementById(
         "prefButton-"+pref
       );
+
 
     if(button){
 
@@ -1127,7 +1429,7 @@ function updatePrefButtons(){
 
 
 /* =====================================================
-47県状況の選択状態
+47県一覧の選択状態
 ===================================================== */
 
 function updateStatusActive(){
@@ -1138,6 +1440,7 @@ function updateStatusActive(){
       document.getElementById(
         "statusItem-"+pref
       );
+
 
     if(item){
 
@@ -1166,62 +1469,69 @@ function createGiftButtons(){
 
   area.innerHTML="";
 
-  /*
-    配信画面では3種類を表示。
-    設定画面では5種類まで変更可能。
-  */
 
-  gifts.slice(0,3).forEach(gift=>{
+  gifts
+    .slice(0,3)
+    .forEach(gift=>{
 
-    const button=
-      document.createElement("button");
+      const button=
+        document.createElement("button");
 
-    button.className="gift";
 
-    button.innerHTML=
-      gift.icon+
-      " "+
-      gift.name+
-      "<br>＋"+
-      gift.move+
-      "マス";
+      button.className="gift";
 
-    button.onclick=()=>{
 
-      moveSelected(
-        gift.move,
-        gift.icon
-      );
+      button.innerHTML=
+        gift.icon+
+        " "+
+        gift.name+
+        "<br>＋"+
+        gift.move+
+        "マス";
 
-    };
 
-    area.appendChild(button);
+      button.onclick=()=>{
 
-  });
+        moveSelected(
+          gift.move,
+          gift.icon
+        );
+
+      };
+
+
+      area.appendChild(button);
+
+    });
 
 }
 
 
 /* =====================================================
-コマを進める
+移動
 ===================================================== */
 
-function moveSelected(move,icon){
+function moveSelected(
+  move,
+  icon
+){
 
   if(!selectedPref){
 
     showPopup(
       "⚠️",
       "出身県を選んでね！",
-      "「🗾 出身県を選ぶ」から県を選択してください。"
+      "「🗾 出身県を選ぶ」から都道府県を選択してください。"
     );
 
     return;
+
   }
 
 
   const old=
     positions[selectedPref];
+
 
   const next=
     Math.min(
@@ -1229,7 +1539,9 @@ function moveSelected(move,icon){
       old+move
     );
 
+
   positions[selectedPref]=next;
+
 
   updateAll();
 
@@ -1263,45 +1575,144 @@ function moveSelected(move,icon){
 
 
 /* =====================================================
-コマ表示
+複数県を同じマスに表示
 ===================================================== */
 
 function renderPieces(){
 
+  /*
+    まず全マスを空にする
+  */
+
   document
-    .querySelectorAll(".piece")
-    .forEach(el=>{
-      el.remove();
+    .querySelectorAll(".pieces")
+    .forEach(container=>{
+
+      container.innerHTML="";
+
     });
 
+
+  /*
+    47県を現在位置ごとに配置
+  */
 
   prefectures.forEach(pref=>{
 
     const pos=
       positions[pref];
 
-    if(pos<=0)return;
+
+    if(pos<=0){
+
+      return;
+
+    }
 
 
-    const cell=
+    const container=
       document.getElementById(
-        "cell-"+pos
+        "pieces-"+pos
       );
 
-    if(!cell)return;
+
+    if(!container){
+
+      return;
+
+    }
 
 
-    const piece=
-      document.createElement("div");
+    /*
+      県名表示
+    */
 
-    piece.className="piece";
-
-    piece.textContent=
+    let displayName=
       pref
         .replace("県","")
         .replace("府","");
 
-    cell.appendChild(piece);
+
+    /*
+      北海道はそのまま
+    */
+
+    if(pref==="北海道"){
+
+      displayName="北海道";
+
+    }
+
+
+    /*
+      コマ作成
+    */
+
+    const piece=
+      document.createElement("div");
+
+
+    piece.className="piece";
+
+
+    /*
+      選択中の県は強調
+    */
+
+    if(pref===selectedPref){
+
+      piece.classList.add(
+        "selected-piece"
+      );
+
+    }
+
+
+    /*
+      県名
+    */
+
+    piece.textContent=
+      displayName;
+
+
+    /*
+      県ごとの固定色
+    */
+
+    piece.style.background=
+      prefectureColor[pref];
+
+
+    /*
+      タップ時に県を選択できる
+    */
+
+    piece.onclick=(event)=>{
+
+      event.stopPropagation();
+
+      selectPref(pref);
+
+    };
+
+
+    /*
+      マウス・タップ時の説明
+    */
+
+    piece.title=
+      pref+
+      " / "+
+      pos+
+      "マス";
+
+
+    /*
+      同じマスへ追加
+    */
+
+    container.appendChild(piece);
 
   });
 
@@ -1309,7 +1720,7 @@ function renderPieces(){
 
 
 /* =====================================================
-47県位置更新
+47県位置
 ===================================================== */
 
 function updateStatus(){
@@ -1320,6 +1731,7 @@ function updateStatus(){
       document.getElementById(
         "status-"+pref
       );
+
 
     if(el){
 
@@ -1346,6 +1758,7 @@ function updateRanking(){
       "rankList"
     );
 
+
   list.innerHTML="";
 
 
@@ -1370,32 +1783,36 @@ function updateRanking(){
   ];
 
 
-  sorted.forEach((item,index)=>{
+  sorted.forEach(
+    (item,index)=>{
 
-    const div=
-      document.createElement("div");
+      const div=
+        document.createElement("div");
 
-    div.className="rank-item";
 
-    div.innerHTML=`
+      div.className="rank-item";
 
-      <div class="rank-medal">
-        ${medals[index]}
-      </div>
 
-      <div class="rank-name">
-        ${item.name}
-      </div>
+      div.innerHTML=`
 
-      <div class="rank-pos">
-        ${item.pos}/${GOAL}マス
-      </div>
+        <div class="rank-medal">
+          ${medals[index]}
+        </div>
 
-    `;
+        <div class="rank-name">
+          ${item.name}
+        </div>
 
-    list.appendChild(div);
+        <div class="rank-pos">
+          ${item.pos}/${GOAL}マス
+        </div>
 
-  });
+      `;
+
+
+      list.appendChild(div);
+
+    });
 
 }
 
@@ -1418,7 +1835,7 @@ function updateAll(){
 
 
 /* =====================================================
-設定画面
+設定
 ===================================================== */
 
 function openSettings(){
@@ -1428,47 +1845,53 @@ function openSettings(){
       "settingsModal"
     );
 
+
   const rows=
     document.getElementById(
       "settingsRows"
     );
 
+
   rows.innerHTML="";
 
 
-  gifts.forEach((gift,index)=>{
+  gifts.forEach(
+    (gift,index)=>{
 
-    const row=
-      document.createElement("div");
+      const row=
+        document.createElement("div");
 
-    row.className="setting-row";
 
-    row.innerHTML=`
+      row.className="setting-row";
 
-      <input
-        class="setting-input"
-        id="icon-${index}"
-        value="${gift.icon}"
-        maxlength="3">
 
-      <input
-        class="setting-input"
-        id="name-${index}"
-        value="${gift.name}"
-        maxlength="10">
+      row.innerHTML=`
 
-      <input
-        class="setting-input"
-        id="move-${index}"
-        type="number"
-        min="0"
-        value="${gift.move}">
+        <input
+          class="setting-input"
+          id="icon-${index}"
+          value="${gift.icon}"
+          maxlength="3">
 
-    `;
+        <input
+          class="setting-input"
+          id="name-${index}"
+          value="${gift.name}"
+          maxlength="10">
 
-    rows.appendChild(row);
+        <input
+          class="setting-input"
+          id="move-${index}"
+          type="number"
+          min="0"
+          value="${gift.move}">
 
-  });
+      `;
+
+
+      rows.appendChild(row);
+
+    });
 
 
   modal.classList.add("show");
@@ -1482,40 +1905,48 @@ function openSettings(){
 
 function saveSettings(){
 
-  gifts.forEach((gift,index)=>{
+  gifts.forEach(
+    (gift,index)=>{
 
-    const icon=
-      document.getElementById(
-        "icon-"+index
-      ).value.trim();
-
-    const name=
-      document.getElementById(
-        "name-"+index
-      ).value.trim();
-
-    let move=
-      Number(
+      const icon=
         document.getElementById(
-          "move-"+index
-        ).value
-      );
+          "icon-"+index
+        ).value.trim();
 
 
-    gift.icon=
-      icon||"🎁";
+      const name=
+        document.getElementById(
+          "name-"+index
+        ).value.trim();
 
-    gift.name=
-      name||"ギフト";
 
-    gift.move=
-      isNaN(move)
-      ?
-      0
-      :
-      Math.max(0,move);
+      const move=
+        Number(
+          document.getElementById(
+            "move-"+index
+          ).value
+        );
 
-  });
+
+      gift.icon=
+        icon||"🎁";
+
+
+      gift.name=
+        name||"ギフト";
+
+
+      gift.move=
+        isNaN(move)
+        ?
+        0
+        :
+        Math.max(
+          0,
+          move
+        );
+
+    });
 
 
   createGiftButtons();
@@ -1539,7 +1970,9 @@ function saveSettings(){
 function closeSettings(){
 
   document
-    .getElementById("settingsModal")
+    .getElementById(
+      "settingsModal"
+    )
     .classList.remove("show");
 
 }
@@ -1556,12 +1989,16 @@ function resetGame(){
       "47都道府県のコマを全部STARTに戻しますか？"
     )
   ){
+
     return;
+
   }
 
 
   prefectures.forEach(pref=>{
+
     positions[pref]=0;
+
   });
 
 
@@ -1587,35 +2024,42 @@ function resetGame(){
 
 
 /* =====================================================
-ポップアップ
+POPUP
 ===================================================== */
 
-function showPopup(icon,title,text){
+function showPopup(
+  icon,
+  title,
+  text
+){
 
   document.getElementById(
     "popupIcon"
   ).textContent=icon;
 
+
   document.getElementById(
     "popupTitle"
   ).textContent=title;
+
 
   document.getElementById(
     "popupText"
   ).textContent=text;
 
-  document.getElementById(
-    "popup"
-  ).classList.add("show");
+
+  document
+    .getElementById("popup")
+    .classList.add("show");
 
 }
 
 
 function closePopup(){
 
-  document.getElementById(
-    "popup"
-  ).classList.remove("show");
+  document
+    .getElementById("popup")
+    .classList.remove("show");
 
 }
 
